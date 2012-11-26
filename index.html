@@ -47,10 +47,9 @@
 				<section data-markdown>
 					## Agenda
 					1. ASP.NET Big Picture
-					1. Composition in ASP.NET
-					1. Composing ASP.NET web applications
-					1. Clients and testing
-					1. Summary and questions
+					1. HTTP &amp; Web API
+					1. Clients &amp; Testing
+					1. Summary &amp; Questions
 
 					<aside class="notes">
 						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you run the speaker notes server.
@@ -58,29 +57,16 @@
 				</section>
 
 				<section>
-					<h2>What is Composition?</h2>
-
-					<aside class="notes">
-						In this talk, I'll focus on architectural, rather than implementation, patterns.
-					</aside>
-				</section>
-
-				<section>
-					<h2>Project Composition</h2>
-					<p class="fragment">Project references</p>
-					<p class="fragment">Assembly references</p>
-					<p class="fragment">NuGet packages</p>
-
-					<aside class="notes">
-						What do I mean by "composition?" There are several ways to look at this term. For starters, you probably already use Project Composition when you build web applications, no matter which framework you currently use. By this I mean that you are likely to have a project for database access and possibly another for your domain in addition to your web project. This form of composition is somewhat unique to web programming because a given page or API call never directly talks to another page or API. Instead, they interact through URLs. Therefore, you can easily go nuts and create a project-per-page or project-per-controller if you really wanted. (I don't recommend this.)
-					</aside>
-				</section>
-
-				<section>
-					<h2>Composition in ASP.NET</h2>
+					<h2>&#8220;ONE&#8221; ASP.NET</h2>
 					<a class="image" href="http://www.hanselman.com/blog/OneASPNETSneakPeekElegantWebFormsAndSnowballsInHell.aspx">
 						<img src="img/one-asp-net.png" alt="One ASP.NET" />
 					</a>
+				</section>
+
+				<section data-markdown>
+					## So how do these differ?
+
+					### Composition
 				</section>
 
 				<section data-markdown>
@@ -88,7 +74,7 @@
 					1. HTML composition
 					1. File structure composition
 					1. Routing
-					1. ASP.NET event pipeline (modules and handlers)
+					1. Modules &amp; Handlers
 				</section>
 
 				<section>
@@ -440,27 +426,30 @@
 					<aside class="notes">
 						Whereas file-based composition will resolve as the page is made available, routing takes a constraint-based approach.
 						You might think of the difference as black-list versus white-list.
+						Of course, Web API also uses routing.
 					</aside>
 				</section>
 
 				<section>
 					<section>
-						<h2>Composition via the ASP.NET Event Pipeline</h2>
-						<pre><code contenteditable>public interface IHttpHandler
-{
-    bool IsReusable { get; }
-    void ProcessRequest(HttpContext context);
-}
-
-public interface IHttpModule
+						<h2>Composition with Modules &amp; Handlers</h2>
+						<pre><code contenteditable>public interface IHttpModule
 {
     void Dispose();
     void Init(HttpApplication context);
+}
+
+public interface IHttpHandler
+{
+    bool IsReusable { get; }
+    void ProcessRequest(HttpContext context);
 }</code></pre>
 					</section>
-					<section>
-						<h2>Learn more</h2>
-						<a href="http://pluralsight.com/training/courses/TableOfContents?courseName=iis-extending"><img src="img/iis.png" /></a>
+					<section data-markdown>
+						## Challenges
+						* Strings and Streams
+						* No nesting
+						* Very low-level
 					</section>
 				</section>
 
@@ -579,7 +568,7 @@ else if (response is OK)
 }
 else if (response is Created)
 {
-    var created = response is Created;
+    var created = response as Created;
     // ...
 }
 else
@@ -688,7 +677,7 @@ ContentNegotiationResult result =
                     var response = task.Result;
                     response.RequestMessage.Method = HttpMethod.Head;
                     response.Content = new HeadContent(response.Content);
-                    return task.Result;
+                    return response;
                 });
         }
 
@@ -795,21 +784,7 @@ Add(&quot;gists&quot;,rg =&gt; rg.To&lt;GistsController&gt;()
 				<section data-markdown>
 					## What's Next?
 
-					[Composition in the Small](#/23)
-
 					[Single Page Applications](http://pluralsight.com/training/Courses/TableOfContents/spa)
-				</section>
-
-				<section data-markdown>
-					## Don't Miss Part 2
-					### Composition in the Small
-					(or "F# for C# Developers")
-
-					[Houston C# User Group](http://www.meetup.com/Houston-CS/)
-
-					[Houston F# User Group](http://www.meetup.com/Houston-FSharp-User-Group/)
-
-					[Wednesday, September 19, 2012 at Microsoft](http://www.meetup.com/Houston-FSharp-User-Group/events/77729212/)
 				</section>
 
 				<section data-markdown>
