@@ -4,6 +4,20 @@
         <name>ContactManager</name>
     </assembly>
     <members>
+        <member name="T:ContactManager.TraceConfig">
+            <summary>
+            This static class contains helper methods related to the registration
+            of <see cref="T:System.Web.Http.Tracing.ITraceWriter"/> instances.
+            </summary>
+        </member>
+        <member name="M:ContactManager.TraceConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Registers the <see cref="T:System.Web.Http.Tracing.ITraceWriter"/> implementation to use
+            for this application.
+            </summary>
+            <param name="configuration">The <see cref="T:System.Web.Http.HttpConfiguration"/> in which
+            to register the trace writer.</param>
+        </member>
         <member name="M:ContactManager.Areas.HelpPage.ApiDescriptionExtensions.GetFriendlyId(System.Web.Http.Description.ApiDescription)">
             <summary>
             Generates an URI-friendly ID for the <see cref="T:System.Web.Http.Description.ApiDescription"/>. E.g. "Get-Values-id_name" instead of "GetValues/{id}?name={name}"

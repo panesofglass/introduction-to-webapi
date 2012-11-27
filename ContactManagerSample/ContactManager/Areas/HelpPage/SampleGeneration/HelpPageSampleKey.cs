@@ -25,8 +25,8 @@ namespace ContactManager.Areas.HelpPage
             {
                 throw new ArgumentNullException("type");
             }
-            ControllerName = string.Empty;
-            ActionName = string.Empty;
+            ControllerName = String.Empty;
+            ActionName = String.Empty;
             ParameterNames = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
             ParameterType = type;
             MediaType = mediaType;

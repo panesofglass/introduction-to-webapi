@@ -1,14 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebForms", "WebForms\WebForms.csproj", "{C34CD048-C887-4AC0-91D6-74245B729582}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 WebForms", "01 WebForms", "{4C152A36-7671-4950-BB95-73E3186E35DB}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 MVC", "02 MVC", "{D2E0BC09-782A-4A8E-8E97-2B26D1228D6F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvc", "Mvc\Mvc.csproj", "{59D1AFCE-9674-4E20-A343-25D97A070F73}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{DF0DA4F1-DD53-4FD4-B916-E2975FC6FCF6}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\NuGet.Config = .nuget\NuGet.Config
@@ -16,13 +8,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{DF0DA4
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 Contact Manager Web API", "03 Contact Manager Web API", "{72410227-466E-436F-93ED-F482A58DEE59}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Contact Manager Web API", "Contact Manager Web API", "{72410227-466E-436F-93ED-F482A58DEE59}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactManager", "ContactManagerSample\ContactManager\ContactManager.csproj", "{7777FD27-3538-491C-B3EF-C4DD80F38886}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactManager.Tests", "ContactManagerSample\ContactManager.Tests\ContactManager.Tests.csproj", "{391982B9-A9BC-4408-ABDA-6D38D2D8C831}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 Web Packs", "04 Web Packs", "{5AA7B05E-B375-4926-A180-020DEB4FBA84}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web Packs", "Web Packs", "{5AA7B05E-B375-4926-A180-020DEB4FBA84}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactWebPack", "WebPackSample\WebPack\ContactWebPack.csproj", "{B662A092-9132-4D05-BF71-D175C07677D4}"
 EndProject
@@ -46,26 +38,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C34CD048-C887-4AC0-91D6-74245B729582}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C34CD048-C887-4AC0-91D6-74245B729582}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C34CD048-C887-4AC0-91D6-74245B729582}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{C34CD048-C887-4AC0-91D6-74245B729582}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{C34CD048-C887-4AC0-91D6-74245B729582}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{C34CD048-C887-4AC0-91D6-74245B729582}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C34CD048-C887-4AC0-91D6-74245B729582}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C34CD048-C887-4AC0-91D6-74245B729582}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{C34CD048-C887-4AC0-91D6-74245B729582}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{C34CD048-C887-4AC0-91D6-74245B729582}.Release|x86.ActiveCfg = Release|Any CPU
-		{59D1AFCE-9674-4E20-A343-25D97A070F73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{59D1AFCE-9674-4E20-A343-25D97A070F73}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{59D1AFCE-9674-4E20-A343-25D97A070F73}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{59D1AFCE-9674-4E20-A343-25D97A070F73}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{59D1AFCE-9674-4E20-A343-25D97A070F73}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{59D1AFCE-9674-4E20-A343-25D97A070F73}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{59D1AFCE-9674-4E20-A343-25D97A070F73}.Release|Any CPU.Build.0 = Release|Any CPU
-		{59D1AFCE-9674-4E20-A343-25D97A070F73}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{59D1AFCE-9674-4E20-A343-25D97A070F73}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{59D1AFCE-9674-4E20-A343-25D97A070F73}.Release|x86.ActiveCfg = Release|Any CPU
 		{7777FD27-3538-491C-B3EF-C4DD80F38886}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7777FD27-3538-491C-B3EF-C4DD80F38886}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7777FD27-3538-491C-B3EF-C4DD80F38886}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
@@ -151,8 +123,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{C34CD048-C887-4AC0-91D6-74245B729582} = {4C152A36-7671-4950-BB95-73E3186E35DB}
-		{59D1AFCE-9674-4E20-A343-25D97A070F73} = {D2E0BC09-782A-4A8E-8E97-2B26D1228D6F}
 		{7777FD27-3538-491C-B3EF-C4DD80F38886} = {72410227-466E-436F-93ED-F482A58DEE59}
 		{391982B9-A9BC-4408-ABDA-6D38D2D8C831} = {72410227-466E-436F-93ED-F482A58DEE59}
 		{9BA2D687-092B-4067-A5E2-A7E3D302BC35} = {72410227-466E-436F-93ED-F482A58DEE59}

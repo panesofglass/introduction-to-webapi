@@ -1,13 +1,13 @@
-﻿using ContactManager.Formatters;
-using ContactManager.Models;
-using Ninject;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http.Formatting;
 using System.Web.Http;
 using System.Web.Http.OData.Builder;
 using System.Web.Http.OData.Formatter;
+using ContactManager.Formatters;
+using ContactManager.Models;
+using Ninject;
 using WebApiContrib.IoC.Ninject;
 
 namespace ContactManager

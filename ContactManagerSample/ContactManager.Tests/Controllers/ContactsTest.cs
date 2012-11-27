@@ -64,11 +64,13 @@ namespace ContactManager.Tests.Controllers
         [TestMethod]
         public void GetContactsWithHttpClient()
         {
-            var config = new HttpConfiguration();
-            WebApiConfig.Register(config);
+            using (var config = new HttpConfiguration())
             using (var server = new HttpServer(config))
             using (var client = new HttpClient(server))
             {
+                WebApiConfig.Register(config);
+                TraceConfig.Register(config);
+
                 // NOTE: Don't use .Result in real applications!!!
                 var response = client.GetAsync("http://idontknowyou.org/api/contacts").Result;
                 var contacts = response.Content.ReadAsAsync<IEnumerable<Contact>>().Result;
