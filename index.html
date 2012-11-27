@@ -768,6 +768,31 @@ Add(&quot;gists&quot;,rg =&gt; rg.To&lt;GistsController&gt;()
 				</section>
 
 				<section data-markdown>
+					## Testing
+
+					In-memory hosting with `HttpServer`:
+	
+					<pre><code contenteditable>using (var config = new HttpConfiguration())
+using (var server = new HttpServer(config))
+using (var client = new HttpClient(server))
+{
+    WebApiConfig.Register(config);
+    var response = await client.GetAsync(&quot;http://foo/api/values&quot;);
+    var body = await response.Content.ReadAsStringAsync();
+    Assert.That(body == &quot;Bar&quot;);
+}</code></pre>
+				</section>
+
+				<section data-markdown>
+					## Other Web API Features
+
+					* Self-hosting
+					* Tracing
+					* Documentation
+					* OData
+				</section>
+
+				<section data-markdown>
 					## Remember
 					1. URIs and Resources can hide application seams
 					1. You don't need everything in one project
@@ -784,7 +809,8 @@ Add(&quot;gists&quot;,rg =&gt; rg.To&lt;GistsController&gt;()
 				<section data-markdown>
 					## What's Next?
 
-					[Single Page Applications](http://pluralsight.com/training/Courses/TableOfContents/spa)
+					* [Single Page Applications](http://pluralsight.com/training/Courses/TableOfContents/spa)
+					* [Web API Koans](http://github.com/WebApiContrib/WebApiKoans)
 				</section>
 
 				<section data-markdown>
